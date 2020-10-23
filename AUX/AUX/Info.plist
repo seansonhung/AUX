@@ -25,9 +25,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Our app uses Bluetooth to find other devices</string>
+	<string>Our app uses Bluetooth to find other devices.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string></string>
+	<string>Our app uses bluetooth to be available for discovery by other devices.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
