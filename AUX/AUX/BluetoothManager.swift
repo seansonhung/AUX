@@ -26,6 +26,7 @@ extension CoreBluetoothManager: CBPeripheralManagerDelegate {
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         if peripheral.state == .poweredOn {
             if peripheral.isAdvertising {
+                print("stop advertising");
                 peripheral.stopAdvertising()
             }
 
@@ -35,11 +36,12 @@ extension CoreBluetoothManager: CBPeripheralManagerDelegate {
             ]
 
             if let name = self.name {
+                print("advertise");
                 advertisingData[CBAdvertisementDataLocalNameKey] = name
             }
             self.peripheralManager?.startAdvertising(advertisingData)
         } else {
-            #warning("handle other states")
+            print("other state");
         }
     }
 }
@@ -49,13 +51,14 @@ extension CoreBluetoothManager: CBCentralManagerDelegate {
         if central.state == .poweredOn {
 
             if central.isScanning {
+                print("stop scan");
                 central.stopScan()
             }
-
+            print("scan");
             let uuid = CBUUID(string: Constants.SERVICE_UUID.rawValue)
             central.scanForPeripherals(withServices: [uuid])
         } else {
-            #warning("Error handling")
+            print("other state");
         }
     }
 
