@@ -1,13 +1,13 @@
 //
-//  AUXUITests.swift
-//  AUXUITests
+//  AuxUITests.swift
+//  AuxUITests
 //
-//  Created by Sean Nguyen on 2020-10-23.
+//  Created by Sean Nguyen on 2020-11-09.
 //
 
 import XCTest
 
-class AUXUITests: XCTestCase {
+class AuxUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

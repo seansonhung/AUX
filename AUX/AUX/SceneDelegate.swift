@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  AUX
+//  Aux
 //
-//  Created by Sean Nguyen on 2020-10-23.
+//  Created by Sean Nguyen on 2020-11-09.
 //
 
 import UIKit
@@ -10,21 +10,14 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    private lazy var bluetoothManager = CoreBluetoothManager()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-           guard let _ = (scene as? UIWindowScene) else { return }
-
-           if let windowScene = scene as? UIWindowScene {
-               window = UIWindow(windowScene: windowScene)
-
-               let vc = BluetoothViewController(bluetoothManager: bluetoothManager)
-               let navController = UINavigationController(rootViewController: vc)
-               window?.rootViewController = navController
-               window?.makeKeyAndVisible()
-           }
-       }
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        guard let _ = (scene as? UIWindowScene) else { return }
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

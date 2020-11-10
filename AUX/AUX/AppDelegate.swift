@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  AUX
+//  Aux
 //
-//  Created by Sean Nguyen on 2020-10-23.
+//  Created by Sean Nguyen on 2020-11-09.
 //
 
 import UIKit
